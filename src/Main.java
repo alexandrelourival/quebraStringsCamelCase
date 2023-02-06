@@ -4,10 +4,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> palavrasCamelCase = List.of(
-                "nome", "Nome", "nomeComposto", "NomeComposto", "CPF", "numeroCPF",
-                "numeroCPFContribuinte", "recupera10Primeiros", "nome#Composto", "10Primeiros"
-        );
+        List<String> palavrasCamelCase = List.of("nome", "Nome", "nomeComposto", "NomeComposto", "CPF", "numeroCPF", "numeroCPFContribuinte", "recupera10Primeiros", "nome#Composto", "10Primeiros");
 
         StringCamelCase stringCamelCase = new StringCamelCase();
 
@@ -18,6 +15,5 @@ public class Main {
                 System.out.println("Palavra: " + palavraCamelCase + " | Error Message: " + e.getMessage());
             }
         }
-
     }
 }

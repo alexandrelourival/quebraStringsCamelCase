@@ -7,6 +7,9 @@ import java.util.regex.Pattern;
 
 public class StringCamelCase {
 
+    public StringCamelCase() {
+    }
+
     public void iniciaComNumero(String s) {
         if (Character.isDigit(s.charAt(0)))
             throw new IniciaComNumeroException("Inválido → não deve começar com números");

@@ -8,9 +8,18 @@ import java.util.List;
 class StringCamelCaseTest {
 
     @Test
+    public void constructorStringCamelCase() {
+        StringCamelCase stringCamelCase = new StringCamelCase();
+
+        Assertions.assertNotNull(stringCamelCase);
+    }
+
+    @Test
     public void iniciaComNumero() {
         StringCamelCase stringCamelCase = new StringCamelCase();
         String s = "10Primeiros";
+
+        Assertions.assertNotNull(stringCamelCase);
         Assertions.assertThrows(IniciaComNumeroException.class, () -> stringCamelCase.iniciaComNumero(s));
     }
 
@@ -18,6 +27,7 @@ class StringCamelCaseTest {
     public void temCaractereEspecial() {
         StringCamelCase stringCamelCase = new StringCamelCase();
         String s = "nome#Composto";
+        Assertions.assertNotNull(stringCamelCase);
         Assertions.assertThrows(TemCaractereEspecialException.class, () -> stringCamelCase.temCaractereEspecial(s));
     }
 
@@ -34,6 +44,7 @@ class StringCamelCaseTest {
         String teste3 = "numeroCPFContribuinte";
         List<String> listaTeste3 = List.of("numero", "CPF", "Contribuinte");
 
+        Assertions.assertNotNull(stringCamelCase);
         Assertions.assertEquals(listaTeste1, stringCamelCase.separarCamelCase(teste1));
         Assertions.assertEquals(listaTeste2, stringCamelCase.separarCamelCase(teste2));
         Assertions.assertEquals(listaTeste3, stringCamelCase.separarCamelCase(teste3));
@@ -49,6 +60,7 @@ class StringCamelCaseTest {
         String teste3 = "CPF";
         String teste4 = "10";
 
+        Assertions.assertNotNull(stringCamelCase);
         Assertions.assertEquals("nome", stringCamelCase.firstCharToLowerCase(teste1));
         Assertions.assertEquals("nome", stringCamelCase.firstCharToLowerCase(teste2));
         Assertions.assertEquals("CPF", stringCamelCase.firstCharToLowerCase(teste3));
@@ -71,6 +83,7 @@ class StringCamelCaseTest {
         String teste4 = "10Primeiros";
         String teste5 = "nome#Composto";
 
+        Assertions.assertNotNull(stringCamelCase);
         Assertions.assertEquals(listaTeste1, stringCamelCase.converterCamelCase(teste1));
         Assertions.assertEquals(listaTeste2, stringCamelCase.converterCamelCase(teste2));
         Assertions.assertEquals(listaTeste3, stringCamelCase.converterCamelCase(teste3));
